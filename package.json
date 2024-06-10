@@ -1,19 +1,7 @@
 {
   "name": "cloudflare-events",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "start": "wrangler dev",
-    "types": "wrangler types"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "4.20240405.0",
-    "typescript": "5.0.4",
-    "wrangler": "3.0.0"
-  },
-  "dependencies": {
-    "cloudevents": "8.0.0"
-  }
+  "packageManager": "npm@10.7.0",
+  "workspaces": [
+    "workers/*"
+  ]
 }
