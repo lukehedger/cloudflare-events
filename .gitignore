@@ -1,4 +1,8 @@
 node_modules
+*.d.ts
+
+# turbo
+.turbo
 
 # wrangler
 .dev.vars

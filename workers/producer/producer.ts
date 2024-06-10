@@ -7,7 +7,7 @@ export default {
     ctx: ExecutionContext,
   ): Promise<Response> {
     // Call PublishWorker with CloudEvent
-    const result = env.publish.add(1, 2);
+    const result = await env.publish.add(1, 2);
     return new Response(result);
   },
 };

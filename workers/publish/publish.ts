@@ -3,8 +3,14 @@
 
 import { WorkerEntrypoint } from "cloudflare:workers";
 
-export default class extends WorkerEntrypoint {
-  add(a, b) {
+export class publish extends WorkerEntrypoint {
+  async add(a, b) {
     return a + b;
   }
 }
+
+export default {
+  fetch() {
+    return new Response("ok");
+  },
+};
