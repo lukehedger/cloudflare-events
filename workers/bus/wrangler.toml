@@ -2,9 +2,9 @@
 compatibility_date = "2024-04-05"
 compatibility_flags = ["nodejs_compat"]
 
-main = "producer.ts"
-name = "producer"
+main = "bus.ts"
+name = "bus"
 
 services = [
-  { binding = "publish", service = "publish", entrypoint = "publish" }
+  { binding = "subscriber", service = "subscriber", entrypoint = "subscriber" }
 ]

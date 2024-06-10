@@ -1,13 +1,11 @@
-import { CloudEvent } from "cloudevents";
-
 export default {
   async fetch(
     request: Request,
     env: Env,
     ctx: ExecutionContext,
   ): Promise<Response> {
-    // Call PublishWorker with CloudEvent
-    const result = await env.publish.add(1, 2);
+    const result = await env.bus.publish({ eventId: "123" });
+
     return new Response(result);
   },
 };
